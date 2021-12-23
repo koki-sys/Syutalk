@@ -354,55 +354,55 @@ function setButtonsTitle() {
 
     // left buttons
     tippy(shareRoomBtn, {
-        content: 'Invite people to join',
+        content: 'メンバーを招待する',
         placement: 'right-start',
     });
     tippy(audioBtn, {
-        content: 'Click to audio OFF',
+        content: 'マイクをオフにする',
         placement: 'right-start',
     });
     tippy(videoBtn, {
-        content: 'Click to video OFF',
+        content: 'ビデオをオフにする',
         placement: 'right-start',
     });
     tippy(screenShareBtn, {
-        content: 'START screen sharing',
+        content: '画面共有を開始する',
         placement: 'right-start',
     });
     tippy(recordStreamBtn, {
-        content: 'START recording',
+        content: '録画を開始する',
         placement: 'right-start',
     });
     tippy(fullScreenBtn, {
-        content: 'VIEW full screen',
+        content: 'フルスクリーンで表示',
         placement: 'right-start',
     });
     tippy(chatRoomBtn, {
-        content: 'OPEN the chat',
+        content: 'チャットウィンドウを開く',
         placement: 'right-start',
     });
     tippy(myHandBtn, {
-        content: 'RAISE your hand',
+        content: '手を挙げる',
         placement: 'right-start',
     });
     tippy(whiteboardBtn, {
-        content: 'OPEN the whiteboard',
+        content: 'ホワイトボードを開く',
         placement: 'right-start',
     });
     tippy(fileShareBtn, {
-        content: 'SHARE the file',
+        content: 'ファイルを共有する',
         placement: 'right-start',
     });
     tippy(mySettingsBtn, {
-        content: 'Show settings',
+        content: '設定を表示する',
         placement: 'right-start',
     });
     tippy(aboutBtn, {
-        content: 'Show about',
+        content: 'Syutalkについて',
         placement: 'right-start',
     });
     tippy(leaveRoomBtn, {
-        content: 'Leave this room',
+        content: '会議を終了する',
         placement: 'right-start',
     });
 
@@ -685,14 +685,14 @@ function whoAreYou() {
         position: 'center',
         imageAlt: 'mirotalk-name',
         imageUrl: welcomeImg,
-        title: 'Enter your name',
+        title: '名前を入力してください。',
         input: 'text',
         html: `<br>
         <div style="overflow: hidden;">
             <button id="initAudioBtn" class="fas fa-microphone" onclick="handleAudio(event, true)"></button>
             <button id="initVideoBtn" class="fas fa-video" onclick="handleVideo(event, true)"></button>
         </div>`,
-        confirmButtonText: `Join meeting`,
+        confirmButtonText: `会議に参加`,
         showClass: {
             popup: 'animate__animated animate__fadeInDown',
         },
@@ -700,7 +700,7 @@ function whoAreYou() {
             popup: 'animate__animated animate__fadeOutUp',
         },
         inputValidator: (value) => {
-            if (!value) return 'Please enter your name';
+            if (!value) return '名前を入力してください！';
 
             document.body.style.backgroundImage = 'none';
             myVideoWrap.style.display = 'inline';
@@ -724,11 +724,11 @@ function whoAreYou() {
     initVideoBtn = getId('initVideoBtn');
 
     tippy(initAudioBtn, {
-        content: 'Click to audio OFF',
+        content: 'マイクをオフにする',
         placement: 'top',
     });
     tippy(initVideoBtn, {
-        content: 'Click to video OFF',
+        content: 'ビデオをオフにする',
         placement: 'top',
     });
 }
@@ -759,21 +759,21 @@ function welcomeUser() {
     Swal.fire({
         background: swalBackground,
         position: 'center',
-        title: '<strong>Welcome ' + myPeerName + '</strong>',
+        title: '<strong>ようこそ ' + myPeerName + '！</strong>',
         imageAlt: 'mirotalk-welcome',
         imageUrl: welcomeImg,
         html:
             `
         <br/> 
-        <p style="color:white;">Share this meeting invite others to join.</p>
+        <p style="color:white;">この会議をシェアまたは招待することで参加できます。</p>
         <p style="color:rgb(8, 189, 89);">` +
             myRoomUrl +
             `</p>`,
         showDenyButton: true,
         showCancelButton: true,
-        confirmButtonText: `Copy meeting URL`,
-        denyButtonText: `Email invite`,
-        cancelButtonText: `Close`,
+        confirmButtonText: `会議URLをコピー`,
+        denyButtonText: `メールで招待`,
+        cancelButtonText: `閉じる`,
         showClass: {
             popup: 'animate__animated animate__fadeInDown',
         },
