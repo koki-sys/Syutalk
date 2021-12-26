@@ -683,8 +683,6 @@ function whoAreYou() {
         allowEscapeKey: false,
         background: swalBackground,
         position: 'center',
-        imageAlt: 'mirotalk-name',
-        imageUrl: welcomeImg,
         title: '名前を入力してください。',
         input: 'text',
         html: `<br>
