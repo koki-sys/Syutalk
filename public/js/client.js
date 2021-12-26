@@ -420,7 +420,7 @@ function setButtonsTitle() {
         content: 'Save messages',
     });
     tippy(msgerClose, {
-        content: 'Close the chat',
+        content: 'チャットを閉じる',
     });
     tippy(msgerEmojiBtn, {
         content: 'Emoji',
@@ -431,10 +431,10 @@ function setButtonsTitle() {
 
     // settings
     tippy(mySettingsCloseBtn, {
-        content: 'Close settings',
+        content: '設定を閉じる',
     });
     tippy(myPeerNameSetBtn, {
-        content: 'Change name',
+        content: '名前の変更',
     });
 
     // whiteboard btns
@@ -1850,7 +1850,7 @@ function setFullScreenBtn() {
                 // only for desktop
                 if (!isMobileDevice) {
                     tippy(fullScreenBtn, {
-                        content: 'VIEW full screen',
+                        content: 'フルスクリーンで表示',
                         placement: 'right-start',
                     });
                 }
@@ -2607,7 +2607,7 @@ function handleAudio(e, init) {
         audioBtn.className = 'fas fa-microphone' + (myAudioStatus ? '' : '-slash');
         if (!isMobileDevice) {
             tippy(initAudioBtn, {
-                content: myAudioStatus ? 'Click to audio OFF' : 'Click to audio ON',
+                content: myAudioStatus ? 'マイクをオフにする' : 'マイクをオンにする',
                 placement: 'top',
             });
         }
@@ -2629,7 +2629,7 @@ function handleVideo(e, init) {
         videoBtn.className = 'fas fa-video' + (myVideoStatus ? '' : '-slash');
         if (!isMobileDevice) {
             tippy(initVideoBtn, {
-                content: myVideoStatus ? 'Click to video OFF' : 'Click to video ON',
+                content: myVideoStatus ? 'カメラをオフにする' : 'カメラをオンにする',
                 placement: 'top',
             });
         }
@@ -2723,7 +2723,7 @@ function setScreenSharingStatus(status) {
     // only for desktop
     if (!isMobileDevice) {
         tippy(screenShareBtn, {
-            content: status ? 'STOP screen sharing' : 'START screen sharing',
+            content: status ? '画面共有をオフにする' : '画面共有をオンにする',
             placement: 'right-start',
         });
     }
@@ -2744,7 +2744,7 @@ function setMyVideoStatusTrue() {
     // only for desktop
     if (!isMobileDevice) {
         tippy(videoBtn, {
-            content: 'Click to video OFF',
+            content: 'カメラをオフにする',
             placement: 'right-start',
         });
     }
@@ -2769,7 +2769,7 @@ function toggleFullScreen() {
     // only for desktop
     if (!isMobileDevice) {
         tippy(fullScreenBtn, {
-            content: isDocumentOnFullScreen ? 'EXIT full screen' : 'VIEW full screen',
+            content: isDocumentOnFullScreen ? 'フルスクリーンを中止する' : 'フルスクリーンで表示する',
             placement: 'right-start',
         });
     }
@@ -2970,7 +2970,7 @@ function handleMediaRecorderStart(event) {
     // only for desktop
     if (!isMobileDevice) {
         tippy(recordStreamBtn, {
-            content: 'STOP recording',
+            content: '録画を中止する',
             placement: 'right-start',
         });
     } else {
@@ -3010,7 +3010,7 @@ function handleMediaRecorderStop(event) {
     // only for desktop
     if (!isMobileDevice) {
         tippy(recordStreamBtn, {
-            content: 'START recording',
+            content: '録画を開始する',
             placement: 'right-start',
         });
     } else {
@@ -3100,7 +3100,7 @@ function showChatRoomDraggable() {
     // only for desktop
     if (!isMobileDevice) {
         tippy(chatRoomBtn, {
-            content: 'CLOSE the chat',
+            content: 'チャットウィンドウを閉じる',
             placement: 'right-start',
         });
     }
@@ -3150,7 +3150,7 @@ function hideChatRoomAndEmojiPicker() {
     // only for desktop
     if (!isMobileDevice) {
         tippy(chatRoomBtn, {
-            content: 'OPEN the chat',
+            content: 'チャットを開く',
             placement: 'right-start',
         });
     }
@@ -3533,7 +3533,7 @@ function setMyHandStatus() {
         myHandStatus = false;
         if (!isMobileDevice) {
             tippy(myHandBtn, {
-                content: 'RAISE your hand',
+                content: '手を挙げる',
                 placement: 'right-start',
             });
         }
@@ -3542,7 +3542,7 @@ function setMyHandStatus() {
         myHandStatus = true;
         if (!isMobileDevice) {
             tippy(myHandBtn, {
-                content: 'LOWER your hand',
+                content: '手を下げる',
                 placement: 'right-start',
             });
         }
@@ -3567,7 +3567,7 @@ function setMyAudioStatus(status) {
     // only for desktop
     if (!isMobileDevice) {
         tippy(audioBtn, {
-            content: status ? 'Click to audio OFF' : 'Click to audio ON',
+            content: status ? 'マイクをオフにする' : 'マイクをオンにする',
             placement: 'right-start',
         });
     }
@@ -3590,7 +3590,7 @@ function setMyVideoStatus(status) {
     // only for desktop
     if (!isMobileDevice) {
         tippy(videoBtn, {
-            content: status ? 'Click to video OFF' : 'Click to video ON',
+            content: status ? 'カメラをオフにする' : 'カメラをオンにする',
             placement: 'right-start',
         });
     }
