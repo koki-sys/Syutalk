@@ -439,67 +439,67 @@ function setButtonsTitle() {
 
     // whiteboard btns
     tippy(wbDrawingColorEl, {
-        content: 'DRAWING color',
+        content: 'ペンの色',
         placement: 'bottom',
     });
     tippy(wbBackgroundColorEl, {
-        content: 'BACKGROUND color',
+        content: 'ボードの色',
         placement: 'bottom',
     });
     tippy(whiteboardPencilBtn, {
-        content: 'DRAWING mode',
+        content: '描画モード',
         placement: 'bottom',
     });
     tippy(whiteboardObjectBtn, {
-        content: 'OBJECT mode',
+        content: '選択モード',
         placement: 'bottom',
     });
     tippy(whiteboardUndoBtn, {
-        content: 'UNDO the board',
+        content: '元に戻す',
         placement: 'bottom',
     });
     tippy(whiteboardRedoBtn, {
-        content: 'REDO the board',
+        content: '次へ',
         placement: 'bottom',
     });
     tippy(whiteboardImgFileBtn, {
-        content: 'ADD image from file',
+        content: 'ファイルから画像を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardImgUrlBtn, {
-        content: 'ADD image from URL',
+        content: 'URLから画像を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardTextBtn, {
-        content: 'ADD the text',
+        content: 'テキストを追加する',
         placement: 'bottom',
     });
     tippy(whiteboardLineBtn, {
-        content: 'ADD the line',
+        content: '線を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardRectBtn, {
-        content: 'ADD the rectangle',
+        content: '四角形を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardCircleBtn, {
-        content: 'ADD the circle',
+        content: '円を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardSaveBtn, {
-        content: 'SAVE the board',
+        content: 'ボードの保存',
         placement: 'bottom',
     });
     tippy(whiteboardEraserBtn, {
-        content: 'ERASE the object',
+        content: '選択したものを削除',
         placement: 'bottom',
     });
     tippy(whiteboardCleanBtn, {
-        content: 'CLEAN the board',
+        content: 'ボード内の全消去',
         placement: 'bottom',
     });
     tippy(whiteboardCloseBtn, {
-        content: 'CLOSE the board',
+        content: 'ボードを閉じる',
         placement: 'bottom',
     });
 
