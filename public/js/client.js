@@ -1677,7 +1677,7 @@ function handleVideoPlayerFs(videoId, videoFullScreenBtnId, peer_id = null) {
     }
 
     function showMsg() {
-        userLog('toast', 'Full screen mode work when video is on');
+        userLog('toast', 'フルスクリーンモードは、ビデオがオンのときに機能します');
     }
 
     function handleFSVideo() {
@@ -2494,7 +2494,7 @@ async function shareRoomUrl() {
         try {
             // not add title and description to load metadata from url
             await navigator.share({ url: myRoomUrl });
-            userLog('toast', 'Room Shared successfully!');
+            userLog('toast', '部屋の共有に成功しました!');
         } catch (err) {
             errorNavigatorShare = true;
             /*
@@ -2579,7 +2579,7 @@ function copyRoomURL() {
     navigator.clipboard.writeText(tmpInput.value);
     console.log('Copied to clipboard Join Link ', roomURL);
     document.body.removeChild(tmpInput);
-    userLog('toast', 'Meeting URL is copied to clipboard 👍');
+    userLog('toast', 'クリップボードに会議URLをコピーしました 👍');
 }
 
 /**
@@ -3488,7 +3488,7 @@ function updateMyPeerName() {
 
     setPeerAvatarImgName('myVideoAvatarImage', myPeerName);
     setPeerChatAvatarImgName('right', myPeerName);
-    userLog('toast', 'My name changed to ' + myPeerName);
+    userLog('toast', '次の名前に変更しました： ' + myPeerName);
 }
 
 /**
@@ -3630,7 +3630,7 @@ function setPeerHandStatus(peer_id, peer_name, status) {
     let peerHandStatus = getId(peer_id + '_handStatus');
     peerHandStatus.style.display = status ? 'block' : 'none';
     if (status) {
-        userLog('toast', peer_name + ' has raised the hand');
+        userLog('toast', peer_name + ' が手を挙げました');
         playSound('raiseHand');
     }
 }
@@ -3705,7 +3705,7 @@ function handlePeerPrivateMsg(peer_id, toPeerName) {
                     pMsg + '<br/><hr>Private message to ' + toPeerName,
                     true,
                 );
-                userLog('toast', 'Message sent to ' + toPeerName + ' 👍');
+                userLog('toast', 'メッセージを' + toPeerName + 'に送りました 👍');
             }
         });
     };
@@ -3802,7 +3802,7 @@ function setMyAudioOff(peer_name) {
     myAudioStatus = localMediaStream.getAudioTracks()[0].enabled;
     audioBtn.className = 'fas fa-microphone-slash';
     setMyAudioStatus(myAudioStatus);
-    userLog('toast', peer_name + ' has disabled your audio');
+    userLog('toast', peer_name + ' があなたのマイクをオフにしました');
     playSound('off');
 }
 
@@ -3815,7 +3815,7 @@ function setMyVideoOff(peer_name) {
     myVideoStatus = localMediaStream.getVideoTracks()[0].enabled;
     videoBtn.className = 'fas fa-video-slash';
     setMyVideoStatus(myVideoStatus);
-    userLog('toast', peer_name + ' has disabled your video');
+    userLog('toast', peer_name + ' があなたのカメラをオフにしました');
     playSound('off');
 }
 
@@ -3850,11 +3850,11 @@ function disableAllPeers(element) {
         if (result.isConfirmed) {
             switch (element) {
                 case 'audio':
-                    userLog('toast', 'Mute everyone 👍');
+                    userLog('toast', '全員をミュートにしました 👍');
                     emitPeersAction('muteAudio');
                     break;
                 case 'video':
-                    userLog('toast', 'Hide everyone 👍');
+                    userLog('toast', '全員のカメラをオフにしました 👍');
                     emitPeersAction('hideVideo');
                     break;
             }
@@ -3894,11 +3894,11 @@ function disablePeer(peer_id, element) {
         if (result.isConfirmed) {
             switch (element) {
                 case 'audio':
-                    userLog('toast', 'Mute audio 👍');
+                    userLog('toast', 'マイクをオフにしました 👍');
                     emitPeerAction(peer_id, 'muteAudio');
                     break;
                 case 'video':
-                    userLog('toast', 'Hide video 👍');
+                    userLog('toast', 'カメラをオフにしました 👍');
                     emitPeerAction(peer_id, 'hideVideo');
                     break;
             }
@@ -3926,7 +3926,7 @@ function lockUnlockRoom() {
  * Refresh Room Status (Locked/Unlocked)
  */
 function emitRoomStatus() {
-    let rStatus = roomLocked ? '🔒 LOCKED the room, no one can access!' : '🔓 UNLOCKED the room';
+    let rStatus = roomLocked ? '🔒 部屋をロックしました、これから入る人はアクセスできません！' : '🔓 部屋のロックを解除しました';
     userLog('toast', rStatus);
 
     sendToServer('roomStatus', {
@@ -3945,7 +3945,7 @@ function handleRoomStatus(config) {
     let room_locked = config.room_locked;
     roomLocked = room_locked;
     lockUnlockRoomBtn.className = roomLocked ? 'fas fa-lock' : 'fas fa-lock-open';
-    userLog('toast', peer_name + ' set room is locked to ' + roomLocked);
+    userLog('toast', peer_name + ' が部屋を ' + roomLocked);
 }
 
 /**
@@ -4431,7 +4431,7 @@ function whiteboardAction(config) {
  */
 function handleWhiteboardAction(config, logme = true) {
     if (logme) {
-        userLog('toast', `${config.peer_name} whiteboard action: ${config.action}`);
+        userLog('toast', `${config.peer_name} ホワイトボード アクション: ${config.action}`);
     }
     switch (config.action) {
         case 'bgcolor':
@@ -4570,7 +4570,7 @@ function handleFileAbort() {
     incomingFileData = [];
     receivedSize = 0;
     console.log('File transfer aborted');
-    userLog('toast', '⚠️ File transfer aborted');
+    userLog('toast', '⚠️ファイル転送が中止されました');
 }
 
 /**
@@ -4847,11 +4847,11 @@ function handleVideoPlayer(config) {
     //
     switch (video_action) {
         case 'open':
-            userLog('toast', peer_name + ' open video player');
+            userLog('toast', peer_name + ' がビデオプレイヤーを開きました');
             openVideoUrlPlayer(config);
             break;
         case 'close':
-            userLog('toast', peer_name + ' close video player');
+            userLog('toast', peer_name + ' がビデオプレイヤーを閉じました');
             closeVideoUrlPlayer();
             break;
     }
