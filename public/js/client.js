@@ -408,25 +408,25 @@ function setButtonsTitle() {
 
     // chat room buttons
     tippy(msgerTheme, {
-        content: 'Ghost theme',
+        content: 'ゴーストテーマ',
     });
     tippy(msgerCPBtn, {
-        content: 'Private messages',
+        content: 'プライベートメッセージ',
     });
     tippy(msgerClean, {
-        content: 'Clean messages',
+        content: 'チャットを消去する',
     });
     tippy(msgerSaveBtn, {
-        content: 'Save messages',
+        content: 'チャットを保存',
     });
     tippy(msgerClose, {
         content: 'チャットを閉じる',
     });
     tippy(msgerEmojiBtn, {
-        content: 'Emoji',
+        content: '絵文字',
     });
     tippy(msgerSendBtn, {
-        content: 'Send',
+        content: '送る',
     });
 
     // settings
@@ -524,7 +524,7 @@ function setButtonsTitle() {
         content: 'Close the videoPlayer',
     });
     tippy(msgerVideoUrlBtn, {
-        content: 'Share YouTube video to all participants',
+        content: 'すべての参加者にYouTube動画を共有',
     });
 }
 
@@ -3268,7 +3268,7 @@ function msgerAddPeers(peers) {
                         id="${peer_id}_pMsgInput"
                         class="msger-input"
                         type="text"
-                        placeholder="💬 Enter your message..."
+                        placeholder="💬 Enterでメッセージ送信..."
                     />
                     <button id="${peer_id}_pMsgBtn" class="fas fa-paper-plane" value="${peer_name}">&nbsp;${peer_name}</button>
                 </div>
@@ -4585,15 +4585,15 @@ function selectFileToShare() {
         imageAlt: 'mirotalk-file-sharing',
         imageUrl: fileSharingImg,
         position: 'center',
-        title: 'Share the file',
+        title: 'ファイルを共有',
         input: 'file',
         inputAttributes: {
             accept: fileSharingInput,
             'aria-label': 'Select the file',
         },
         showDenyButton: true,
-        confirmButtonText: `Send`,
-        denyButtonText: `Cancel`,
+        confirmButtonText: `送る`,
+        denyButtonText: `キャンセル`,
         showClass: {
             popup: 'animate__animated animate__fadeInDown',
         },
@@ -4751,7 +4751,7 @@ function sendVideoUrl(peer_id = null) {
         background: swalBackground,
         position: 'center',
         imageUrl: youtubeImg,
-        title: 'Share YouTube Video',
+        title: 'YouTube動画の共有',
         text: 'Past YouTube video URL',
         input: 'text',
         showCancelButton: true,
