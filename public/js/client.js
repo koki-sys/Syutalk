@@ -4990,10 +4990,10 @@ function leaveRoom() {
         position: 'center',
         imageAlt: 'mirotalk-leave',
         imageUrl: leaveRoomImg,
-        title: 'Leave this room?',
+        title: '会議を退出しますか？',
         showDenyButton: true,
-        confirmButtonText: `Yes`,
-        denyButtonText: `No`,
+        confirmButtonText: `はい`,
+        denyButtonText: `いいえ`,
         showClass: {
             popup: 'animate__animated animate__fadeInDown',
         },
@@ -5001,7 +5001,8 @@ function leaveRoom() {
             popup: 'animate__animated animate__fadeOutUp',
         },
     }).then((result) => {
-        if (result.isConfirmed) window.location.href = '/newcall';
+        // トップへ遷移
+        if (result.isConfirmed) window.location.href = 'https://syuboard.lolipop.io/';
     });
 }
 
