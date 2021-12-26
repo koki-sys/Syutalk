@@ -408,25 +408,25 @@ function setButtonsTitle() {
 
     // chat room buttons
     tippy(msgerTheme, {
-        content: 'Ghost theme',
+        content: 'ゴーストテーマ',
     });
     tippy(msgerCPBtn, {
-        content: 'Private messages',
+        content: 'プライベートメッセージ',
     });
     tippy(msgerClean, {
-        content: 'Clean messages',
+        content: 'チャットを消去する',
     });
     tippy(msgerSaveBtn, {
-        content: 'Save messages',
+        content: 'チャットを保存',
     });
     tippy(msgerClose, {
         content: 'チャットを閉じる',
     });
     tippy(msgerEmojiBtn, {
-        content: 'Emoji',
+        content: '絵文字',
     });
     tippy(msgerSendBtn, {
-        content: 'Send',
+        content: '送る',
     });
 
     // settings
@@ -439,67 +439,67 @@ function setButtonsTitle() {
 
     // whiteboard btns
     tippy(wbDrawingColorEl, {
-        content: 'DRAWING color',
+        content: 'ペンの色',
         placement: 'bottom',
     });
     tippy(wbBackgroundColorEl, {
-        content: 'BACKGROUND color',
+        content: 'ボードの色',
         placement: 'bottom',
     });
     tippy(whiteboardPencilBtn, {
-        content: 'DRAWING mode',
+        content: '描画モード',
         placement: 'bottom',
     });
     tippy(whiteboardObjectBtn, {
-        content: 'OBJECT mode',
+        content: '選択モード',
         placement: 'bottom',
     });
     tippy(whiteboardUndoBtn, {
-        content: 'UNDO the board',
+        content: '元に戻す',
         placement: 'bottom',
     });
     tippy(whiteboardRedoBtn, {
-        content: 'REDO the board',
+        content: '次へ',
         placement: 'bottom',
     });
     tippy(whiteboardImgFileBtn, {
-        content: 'ADD image from file',
+        content: 'ファイルから画像を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardImgUrlBtn, {
-        content: 'ADD image from URL',
+        content: 'URLから画像を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardTextBtn, {
-        content: 'ADD the text',
+        content: 'テキストを追加する',
         placement: 'bottom',
     });
     tippy(whiteboardLineBtn, {
-        content: 'ADD the line',
+        content: '線を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardRectBtn, {
-        content: 'ADD the rectangle',
+        content: '四角形を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardCircleBtn, {
-        content: 'ADD the circle',
+        content: '円を追加する',
         placement: 'bottom',
     });
     tippy(whiteboardSaveBtn, {
-        content: 'SAVE the board',
+        content: 'ボードの保存',
         placement: 'bottom',
     });
     tippy(whiteboardEraserBtn, {
-        content: 'ERASE the object',
+        content: '選択したものを削除',
         placement: 'bottom',
     });
     tippy(whiteboardCleanBtn, {
-        content: 'CLEAN the board',
+        content: 'ボード内の全消去',
         placement: 'bottom',
     });
     tippy(whiteboardCloseBtn, {
-        content: 'CLOSE the board',
+        content: 'ボードを閉じる',
         placement: 'bottom',
     });
 
@@ -524,7 +524,7 @@ function setButtonsTitle() {
         content: 'Close the videoPlayer',
     });
     tippy(msgerVideoUrlBtn, {
-        content: 'Share YouTube video to all participants',
+        content: 'すべての参加者にYouTube動画を共有',
     });
 }
 
@@ -623,7 +623,7 @@ function initClientPeer() {
     setTheme(mirotalkTheme);
 
     if (!isWebRTCSupported) {
-        userLog('error', 'This browser seems not supported WebRTC!');
+        userLog('error', 'このブラウザはWebRTCをサポートしていないようです！');
         return;
     }
 
@@ -1677,7 +1677,7 @@ function handleVideoPlayerFs(videoId, videoFullScreenBtnId, peer_id = null) {
     }
 
     function showMsg() {
-        userLog('toast', 'Full screen mode work when video is on');
+        userLog('toast', 'フルスクリーンモードは、ビデオがオンのときに機能します');
     }
 
     function handleFSVideo() {
@@ -1897,7 +1897,7 @@ function setChatRoomBtn() {
     // show msger participants section
     msgerCPBtn.addEventListener('click', (e) => {
         if (!thereIsPeerConnections()) {
-            userLog('info', 'No participants detected');
+            userLog('info', '参加者は検出されませんでした');
             return;
         }
         msgerCP.style.display = 'flex';
@@ -1919,7 +1919,7 @@ function setChatRoomBtn() {
             downloadChatMsgs();
             return;
         }
-        userLog('info', 'No chat messages to save');
+        userLog('info', '保存するチャットメッセージはありません');
     });
 
     // close chat room - show left button and status menu if hide
@@ -2313,7 +2313,7 @@ function setLocalMaxFps(maxFrameRate) {
         })
         .catch((err) => {
             console.error('setLocalMaxFps', err);
-            userLog('error', "Your device doesn't support the selected fps, please select the another one.");
+            userLog('error', "お使いのデバイスは選択したfpsをサポートしていません。別のfpsを選択してください。");
         });
 }
 
@@ -2330,7 +2330,7 @@ function setLocalVideoQuality() {
         })
         .catch((err) => {
             console.error('setLocalVideoQuality', err);
-            userLog('error', "Your device doesn't support the selected video quality, please select the another one.");
+            userLog('error', "お使いのデバイスは選択したビデオ品質をサポートしていません。別のビデオ品質を選択してください。");
         });
 }
 
@@ -2441,7 +2441,7 @@ function handleError(err) {
         case 'OverconstrainedError':
             userLog(
                 'error',
-                "GetUserMedia: Your device doesn't support the selected video quality or fps, please select the another one.",
+                "GetUserMedia：お使いのデバイスは選択したビデオ品質またはfpsをサポートしていません。別のものを選択してください。",
             );
             break;
         default:
@@ -2494,7 +2494,7 @@ async function shareRoomUrl() {
         try {
             // not add title and description to load metadata from url
             await navigator.share({ url: myRoomUrl });
-            userLog('toast', 'Room Shared successfully!');
+            userLog('toast', '部屋の共有に成功しました!');
         } catch (err) {
             errorNavigatorShare = true;
             /*
@@ -2579,7 +2579,7 @@ function copyRoomURL() {
     navigator.clipboard.writeText(tmpInput.value);
     console.log('Copied to clipboard Join Link ', roomURL);
     document.body.removeChild(tmpInput);
-    userLog('toast', 'Meeting URL is copied to clipboard 👍');
+    userLog('toast', 'クリップボードに会議URLをコピーしました 👍');
 }
 
 /**
@@ -2660,7 +2660,7 @@ function swapCamera() {
         })
         .catch((err) => {
             console.log('[Error] to swaping camera', err);
-            userLog('error', 'Error to swaping the camera ' + err);
+            userLog('error', 'カメラの交換中にエラーが発生しました ' + err);
             // https://blog.addpipe.com/common-getusermedia-errors/
         });
 }
@@ -2710,7 +2710,7 @@ function toggleScreenSharing() {
         })
         .catch((err) => {
             console.error('[Error] Unable to share the screen', err);
-            userLog('error', 'Unable to share the screen ' + err);
+            userLog('error', '画面を共有できません ' + err);
         });
 }
 
@@ -2915,12 +2915,12 @@ function startStreamRecording() {
                 })
                 .catch((err) => {
                     console.error('[Error] Unable to recording the screen + audio', err);
-                    userLog('error', 'Unable to recording the screen + audio ' + err);
+                    userLog('error', '画面と音声を録音できません ' + err);
                 });
         }
     } catch (err) {
         console.error('Exception while creating MediaRecorder: ', err);
-        userLog('error', "Can't start stream recording: " + err);
+        userLog('error', "ストリーム録画を開始できません： " + err);
         return;
     }
 }
@@ -3046,16 +3046,16 @@ function downloadRecordedStream() {
         userLog(
             'success-html',
             `<div style="text-align: left;">
-                🔴 Recording Info <br/>
-                FILE: ${recFileName} <br/>
-                SIZE: ${blobFileSize} <br/>
-                Please wait to be processed, then will be downloaded to your ${currentDevice} device.
+                🔴 録画情報 <br/>
+                ファイル名: ${recFileName} <br/>
+                サイズ: ${blobFileSize} <br/>
+                ファイルのダウンロード中です。しばらくお待ちください。
             </div>`,
         );
 
         saveBlobToFile(blob, recFileName);
     } catch (err) {
-        userLog('error', 'Recording save failed: ' + err);
+        userLog('error', '保存に失敗しました: ' + err);
     }
 }
 
@@ -3113,7 +3113,7 @@ function cleanMessages() {
     Swal.fire({
         background: swalBackground,
         position: 'center',
-        title: 'Clean up chat Messages?',
+        title: 'チャットメッセージを消去しますか？',
         imageUrl: deleteImg,
         showDenyButton: true,
         confirmButtonText: `Yes`,
@@ -3161,7 +3161,7 @@ function hideChatRoomAndEmojiPicker() {
  */
 function sendChatMessage() {
     if (!thereIsPeerConnections()) {
-        userLog('info', "Can't send message, no participants in the room");
+        userLog('info', "メッセージを送信できません。部屋に参加者がいません");
         msgerInput.value = '';
         return;
     }
@@ -3268,7 +3268,7 @@ function msgerAddPeers(peers) {
                         id="${peer_id}_pMsgInput"
                         class="msger-input"
                         type="text"
-                        placeholder="💬 Enter your message..."
+                        placeholder="💬 Enterでメッセージ送信..."
                     />
                     <button id="${peer_id}_pMsgBtn" class="fas fa-paper-plane" value="${peer_name}">&nbsp;${peer_name}</button>
                 </div>
@@ -3488,7 +3488,7 @@ function updateMyPeerName() {
 
     setPeerAvatarImgName('myVideoAvatarImage', myPeerName);
     setPeerChatAvatarImgName('right', myPeerName);
-    userLog('toast', 'My name changed to ' + myPeerName);
+    userLog('toast', '次の名前に変更しました： ' + myPeerName);
 }
 
 /**
@@ -3630,7 +3630,7 @@ function setPeerHandStatus(peer_id, peer_name, status) {
     let peerHandStatus = getId(peer_id + '_handStatus');
     peerHandStatus.style.display = status ? 'block' : 'none';
     if (status) {
-        userLog('toast', peer_name + ' has raised the hand');
+        userLog('toast', peer_name + ' が手を挙げました');
         playSound('raiseHand');
     }
 }
@@ -3705,7 +3705,7 @@ function handlePeerPrivateMsg(peer_id, toPeerName) {
                     pMsg + '<br/><hr>Private message to ' + toPeerName,
                     true,
                 );
-                userLog('toast', 'Message sent to ' + toPeerName + ' 👍');
+                userLog('toast', 'メッセージを' + toPeerName + 'に送りました 👍');
             }
         });
     };
@@ -3802,7 +3802,7 @@ function setMyAudioOff(peer_name) {
     myAudioStatus = localMediaStream.getAudioTracks()[0].enabled;
     audioBtn.className = 'fas fa-microphone-slash';
     setMyAudioStatus(myAudioStatus);
-    userLog('toast', peer_name + ' has disabled your audio');
+    userLog('toast', peer_name + ' があなたのマイクをオフにしました');
     playSound('off');
 }
 
@@ -3815,7 +3815,7 @@ function setMyVideoOff(peer_name) {
     myVideoStatus = localMediaStream.getVideoTracks()[0].enabled;
     videoBtn.className = 'fas fa-video-slash';
     setMyVideoStatus(myVideoStatus);
-    userLog('toast', peer_name + ' has disabled your video');
+    userLog('toast', peer_name + ' があなたのカメラをオフにしました');
     playSound('off');
 }
 
@@ -3825,7 +3825,7 @@ function setMyVideoOff(peer_name) {
  */
 function disableAllPeers(element) {
     if (!thereIsPeerConnections()) {
-        userLog('info', 'No participants detected');
+        userLog('info', '参加者は検出されませんでした');
         return;
     }
     Swal.fire({
@@ -3850,11 +3850,11 @@ function disableAllPeers(element) {
         if (result.isConfirmed) {
             switch (element) {
                 case 'audio':
-                    userLog('toast', 'Mute everyone 👍');
+                    userLog('toast', '全員をミュートにしました 👍');
                     emitPeersAction('muteAudio');
                     break;
                 case 'video':
-                    userLog('toast', 'Hide everyone 👍');
+                    userLog('toast', '全員のカメラをオフにしました 👍');
                     emitPeersAction('hideVideo');
                     break;
             }
@@ -3869,7 +3869,7 @@ function disableAllPeers(element) {
  */
 function disablePeer(peer_id, element) {
     if (!thereIsPeerConnections()) {
-        userLog('info', 'No participants detected');
+        userLog('info', '参加者は検出されませんでした');
         return;
     }
     Swal.fire({
@@ -3894,11 +3894,11 @@ function disablePeer(peer_id, element) {
         if (result.isConfirmed) {
             switch (element) {
                 case 'audio':
-                    userLog('toast', 'Mute audio 👍');
+                    userLog('toast', 'マイクをオフにしました 👍');
                     emitPeerAction(peer_id, 'muteAudio');
                     break;
                 case 'video':
-                    userLog('toast', 'Hide video 👍');
+                    userLog('toast', 'カメラをオフにしました 👍');
                     emitPeerAction(peer_id, 'hideVideo');
                     break;
             }
@@ -3926,7 +3926,7 @@ function lockUnlockRoom() {
  * Refresh Room Status (Locked/Unlocked)
  */
 function emitRoomStatus() {
-    let rStatus = roomLocked ? '🔒 LOCKED the room, no one can access!' : '🔓 UNLOCKED the room';
+    let rStatus = roomLocked ? '🔒 部屋をロックしました、これから入る人はアクセスできません！' : '🔓 部屋のロックを解除しました';
     userLog('toast', rStatus);
 
     sendToServer('roomStatus', {
@@ -3945,7 +3945,7 @@ function handleRoomStatus(config) {
     let room_locked = config.room_locked;
     roomLocked = room_locked;
     lockUnlockRoomBtn.className = roomLocked ? 'fas fa-lock' : 'fas fa-lock-open';
-    userLog('toast', peer_name + ' set room is locked to ' + roomLocked);
+    userLog('toast', peer_name + ' が部屋を ' + roomLocked);
 }
 
 /**
@@ -3959,8 +3959,8 @@ function handleRoomLocked() {
         background: swalBackground,
         position: 'center',
         imageUrl: roomLockedImg,
-        title: 'Oops, Room Locked',
-        text: 'The room is locked, try with another one.',
+        title: '部屋がロックされています！',
+        text: '部屋がロックされています、もう一度お試しください。',
         showDenyButton: false,
         confirmButtonText: `Ok`,
         showClass: {
@@ -4093,7 +4093,7 @@ function whiteboardAddObj(type) {
         case 'imgUrl':
             Swal.fire({
                 background: swalBackground,
-                title: 'Image URL',
+                title: 'URLから画像を取得',
                 input: 'text',
                 showCancelButton: true,
                 confirmButtonText: 'OK',
@@ -4105,7 +4105,7 @@ function whiteboardAddObj(type) {
                             addWbCanvasObj(myImg);
                         });
                     } else {
-                        userLog('error', 'The URL is not a valid image');
+                        userLog('error', 'URLが有効な画像ではありません');
                     }
                 }
             });
@@ -4115,7 +4115,7 @@ function whiteboardAddObj(type) {
                 allowOutsideClick: false,
                 background: swalBackground,
                 position: 'center',
-                title: 'Select the image',
+                title: '画像を選択',
                 input: 'file',
                 inputAttributes: {
                     accept: wbImageInput,
@@ -4140,7 +4140,7 @@ function whiteboardAddObj(type) {
                         };
                         reader.readAsDataURL(wbCanvasImg);
                     } else {
-                        userLog('error', 'File not selected or empty');
+                        userLog('error', 'ファイルが選択されていないか空です');
                     }
                 }
             });
@@ -4148,7 +4148,7 @@ function whiteboardAddObj(type) {
         case 'text':
             Swal.fire({
                 background: swalBackground,
-                title: 'Enter the text',
+                title: 'テキストを追加',
                 input: 'text',
                 showCancelButton: true,
                 confirmButtonText: 'OK',
@@ -4395,8 +4395,8 @@ function confirmCleanBoard() {
         background: swalBackground,
         imageUrl: deleteImg,
         position: 'center',
-        title: 'Clean the board',
-        text: 'Are you sure you want to clean the board?',
+        title: 'ボードの消去',
+        text: 'ボードを消去してもよろしいですか？',
         showDenyButton: true,
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
@@ -4431,7 +4431,7 @@ function whiteboardAction(config) {
  */
 function handleWhiteboardAction(config, logme = true) {
     if (logme) {
-        userLog('toast', `${config.peer_name} whiteboard action: ${config.action}`);
+        userLog('toast', `${config.peer_name} ホワイトボード アクション: ${config.action}`);
     }
     switch (config.action) {
         case 'bgcolor':
@@ -4525,7 +4525,7 @@ function sendFileData() {
         if (offset === fileToSend.size) {
             sendInProgress = false;
             sendFileDiv.style.display = 'none';
-            userLog('success', 'The file ' + fileToSend.name + ' was sent successfully.');
+            userLog('success', 'ファイルを ' + fileToSend.name + ' へ送信しました！');
         }
 
         if (offset < fileToSend.size) readSlice(offset);
@@ -4570,7 +4570,7 @@ function handleFileAbort() {
     incomingFileData = [];
     receivedSize = 0;
     console.log('File transfer aborted');
-    userLog('toast', '⚠️ File transfer aborted');
+    userLog('toast', '⚠️ファイル転送が中止されました');
 }
 
 /**
@@ -4585,15 +4585,15 @@ function selectFileToShare() {
         imageAlt: 'mirotalk-file-sharing',
         imageUrl: fileSharingImg,
         position: 'center',
-        title: 'Share the file',
+        title: 'ファイルを共有',
         input: 'file',
         inputAttributes: {
             accept: fileSharingInput,
             'aria-label': 'Select the file',
         },
         showDenyButton: true,
-        confirmButtonText: `Send`,
-        denyButtonText: `Cancel`,
+        confirmButtonText: `送る`,
+        denyButtonText: `キャンセル`,
         showClass: {
             popup: 'animate__animated animate__fadeInDown',
         },
@@ -4606,7 +4606,7 @@ function selectFileToShare() {
             if (fileToSend && fileToSend.size > 0) {
                 // no peers in the room
                 if (!thereIsPeerConnections()) {
-                    userLog('info', 'No participants detected');
+                    userLog('info', '参加者は検出されませんでした');
                     return;
                 }
                 // send some metadata about our file to peers in the room
@@ -4624,7 +4624,7 @@ function selectFileToShare() {
                     sendFileData();
                 }, 1000);
             } else {
-                userLog('error', 'File not selected or empty.');
+                userLog('error', 'ファイルが選択されていないか、空です。');
             }
         }
     });
@@ -4751,7 +4751,7 @@ function sendVideoUrl(peer_id = null) {
         background: swalBackground,
         position: 'center',
         imageUrl: youtubeImg,
-        title: 'Share YouTube Video',
+        title: 'YouTube動画の共有',
         text: 'Past YouTube video URL',
         input: 'text',
         showCancelButton: true,
@@ -4765,7 +4765,7 @@ function sendVideoUrl(peer_id = null) {
     }).then((result) => {
         if (result.value) {
             if (!thereIsPeerConnections()) {
-                userLog('info', 'No participants detected');
+                userLog('info', '参加者は検出されませんでした');
                 return;
             }
             console.log('Video URL: ' + result.value);
@@ -4793,7 +4793,7 @@ function openVideoUrlPlayer(config) {
             videoUrlCont.style.display = 'flex';
             isVideoUrlPlayerOpen = true;
         } else {
-            userLog('error', 'Something wrong, try with another Youtube URL');
+            userLog('error', '何か問題があります。別のYoutubeURLで試してください');
         }
     } else {
         // video player seems open
@@ -4847,11 +4847,11 @@ function handleVideoPlayer(config) {
     //
     switch (video_action) {
         case 'open':
-            userLog('toast', peer_name + ' open video player');
+            userLog('toast', peer_name + ' がビデオプレイヤーを開きました');
             openVideoUrlPlayer(config);
             break;
         case 'close':
-            userLog('toast', peer_name + ' close video player');
+            userLog('toast', peer_name + ' がビデオプレイヤーを閉じました');
             closeVideoUrlPlayer();
             break;
     }
@@ -4880,11 +4880,11 @@ function kickOut(peer_id, peerKickOutBtn) {
         background: swalBackground,
         position: 'center',
         imageUrl: confirmImg,
-        title: 'Kick out ' + pName,
-        text: 'Are you sure you want to kick out this participant?',
+        title: pName + 'をバンする',
+        text: 'この参加者を追い出しますか？',
         showDenyButton: true,
-        confirmButtonText: `Yes`,
-        denyButtonText: `No`,
+        confirmButtonText: `はい`,
+        denyButtonText: `いいえ`,
         showClass: {
             popup: 'animate__animated animate__fadeInDown',
         },
@@ -4919,12 +4919,12 @@ function handleKickedOut(config) {
         background: swalBackground,
         position: 'center',
         imageUrl: kickedOutImg,
-        title: 'Kicked out!',
+        title: 'バンしました！',
         html:
             `<h2 style="color: red;">` +
             `User ` +
             peer_name +
-            `</h2> will kick out you after <b style="color: red;"></b> milliseconds.`,
+            `</h2> があなたをバンしました。 <b style="color: red;"></b> 秒後にバンされます.`,
         timer: 10000,
         timerProgressBar: true,
         didOpen: () => {
