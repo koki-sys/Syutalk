@@ -1305,7 +1305,7 @@ function loadLocalMedia(stream) {
     myCountTimeImg.className = 'fas fa-clock';
     myCountTime.setAttribute('id', 'countTime');
     tippy(myCountTime, {
-        content: 'Session Time',
+        content: '経過時間',
     });
     // my peer name
     myVideoParagraphImg.setAttribute('id', 'myVideoParagraphImg');
@@ -1313,32 +1313,32 @@ function loadLocalMedia(stream) {
     myVideoParagraph.setAttribute('id', 'myVideoParagraph');
     myVideoParagraph.className = 'videoPeerName';
     tippy(myVideoParagraph, {
-        content: 'My name',
+        content: 'あなたの名前です',
     });
     // my hand status element
     myHandStatusIcon.setAttribute('id', 'myHandStatusIcon');
     myHandStatusIcon.className = 'fas fa-hand-paper pulsate';
     myHandStatusIcon.style.setProperty('color', 'rgb(0, 255, 0)');
     tippy(myHandStatusIcon, {
-        content: 'My hand is RAISED',
+        content: '手を挙げています',
     });
     // my video status element
     myVideoStatusIcon.setAttribute('id', 'myVideoStatusIcon');
     myVideoStatusIcon.className = 'fas fa-video';
     tippy(myVideoStatusIcon, {
-        content: 'My video is ON',
+        content: 'カメラがオンになっています',
     });
     // my audio status element
     myAudioStatusIcon.setAttribute('id', 'myAudioStatusIcon');
     myAudioStatusIcon.className = 'fas fa-microphone';
     tippy(myAudioStatusIcon, {
-        content: 'My audio is ON',
+        content: 'マイクがオンになっています',
     });
     // my video full screen mode
     myVideoFullScreenBtn.setAttribute('id', 'myVideoFullScreenBtn');
     myVideoFullScreenBtn.className = 'fas fa-expand';
     tippy(myVideoFullScreenBtn, {
-        content: 'Full screen mode',
+        content: 'フルスクリーンで表示',
     });
     // my video avatar image
     myVideoAvatarImage.setAttribute('id', 'myVideoAvatarImage');
@@ -3561,7 +3561,7 @@ function setMyAudioStatus(status) {
     // send my audio status to all peers in the room
     emitPeerStatus('audio', status);
     tippy(myAudioStatusIcon, {
-        content: status ? 'My audio is ON' : 'My audio is OFF',
+        content: status ? 'マイクはオンになっています' : 'マイクはオフになっています',
     });
     status ? playSound('on') : playSound('off');
     // only for desktop
@@ -3584,7 +3584,7 @@ function setMyVideoStatus(status) {
     // send my video status to all peers in the room
     emitPeerStatus('video', status);
     tippy(myVideoStatusIcon, {
-        content: status ? 'My video is ON' : 'My video is OFF',
+        content: status ? 'カメラはオンになっています' : 'カメラはオフになっています',
     });
     status ? playSound('on') : playSound('off');
     // only for desktop
