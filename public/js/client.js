@@ -4960,18 +4960,14 @@ function showAbout() {
     Swal.fire({
         background: swalBackground,
         position: 'center',
-        title: '<strong>WebRTC Made with ❤️</strong>',
-        imageAlt: 'mirotalk-about',
-        imageUrl: aboutImg,
+        title: '<strong>Syutalkについて</strong>',
         html: `
         <br/>
         <div id="about">
-            <b>Open Source</b> project on
-            <a href="https://github.com/miroslavpejic85/mirotalk" target="_blank"><br/></br>
-            <img alt="mirotalk github" src="../images/github.png"></a><br/><br/>
-            <button class="far fa-heart pulsate" onclick="window.open('https://github.com/sponsors/miroslavpejic85?o=esb')"> Sponsor</button>
-            <br /><br />
-            Author:<a href="https://www.linkedin.com/in/miroslav-pejic-976a07101/" target="_blank"> Miroslav Pejic</a>
+            Syutalkは
+            <a href="https://github.com/miroslavpejic85/mirotalk" target="_blank">mirotalk</a>
+            をベースとした<br>会議アプリケーションです。<br><br>
+            <a href="https://github.com/koki-sys/Syutalk">Syutalk Github</a>
         </div>
         `,
         showClass: {
