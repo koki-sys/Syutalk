@@ -69,7 +69,7 @@ let callStartTime;
 let callElapsedTime;
 let recStartTime;
 let recElapsedTime;
-let mirotalkTheme = 'neon'; // neon - dark - forest - ghost ...
+let mirotalkTheme = 'forest'; // neon - dark - forest - ghost ...
 let mirotalkBtnsBar = 'vertical'; // vertical - horizontal
 let swalBackground = 'rgba(0, 0, 0, 0.7)'; // black - #16171b - transparent ...
 let peerGeo;
@@ -683,8 +683,6 @@ function whoAreYou() {
         allowEscapeKey: false,
         background: swalBackground,
         position: 'center',
-        imageAlt: 'mirotalk-name',
-        imageUrl: welcomeImg,
         title: '名前を入力してください。',
         input: 'text',
         html: `<br>
